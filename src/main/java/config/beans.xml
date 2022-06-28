@@ -5,6 +5,7 @@
 							http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- <bean id='hello' class='beans.HelloWorldEn'/> -->
-	<bean id='hello' class='beans.HelloWorldKo'/>
+	<!-- <bean id='hello' class='beans.HelloWorldKo'/> -->
+	<bean id='t1' class='beans.TestBean'/>
 </beans>
 		
