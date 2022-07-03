@@ -12,7 +12,7 @@
 	
 	<bean id='obj1' class='beans.TestBean3' lazy-init='true'/>
 	
-	<bean id='en' class='beans.HelloWorldEn'/>
+	<bean id='en' class='beans.HelloWorldEn' scope='prototype'/>
 	<bean id='ko' class='beans.HelloWorldKo'/>
 	<bean id='obj2' class='beans.TestBean3' lazy-init='true'>
 		<!-- 생성자 주입시 타입 지정을 안했을 경우  string double int 순으로 주입해줌 -->
@@ -27,6 +27,32 @@
 		<property name='data2' value='10.0'/>
 		<property name='data3' value='객체'/>
 		<property name='data5' ref='ko'/>
+		<property name='list'>
+			<list>
+				<value>문자열1</value>
+				<value>문자열2</value>
+				<ref bean='en'/>
+			</list>
+		</property>
+		<property name='set'>
+			<set>
+				<value>문자열1</value>
+				<value>문자열2</value>
+				<ref bean='en'/>
+			</set>
+		</property>
+		<property name='map'>
+			<map>
+				<entry key='a1' value='문자열1'/>
+				<entry key='a2' value-ref='en'/>
+			</map>
+		</property>
+		<property name='properties'>
+			<props>
+				<prop key='p1'>문자열1</prop>
+				<prop key='p2'>문자열2</prop>
+			</props>
+		</property>
 	</bean>
 	
 	

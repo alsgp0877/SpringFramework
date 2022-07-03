@@ -1,5 +1,10 @@
 package beans;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
 public class TestBean3{
 
 	private int data1;
@@ -7,6 +12,10 @@ public class TestBean3{
 	private String data3;
 	private HelloWorldEn data4;
 	private HelloWorldKo data5;
+	private List<Object> list;
+	private Set<Object> set;
+	private Map<String,Object> map;
+	private Properties properties;
 	
 	public TestBean3() {
 		System.out.println("TestBean3 기본 생성자");
@@ -48,6 +57,45 @@ public class TestBean3{
 
 	public void setData5(HelloWorldKo data5) {
 		this.data5 = data5;
+	}
+	
+	
+
+	public List<Object> getList() {
+		return list;
+	}
+
+	public void setList(List<Object> list) {
+		this.list = list;
+	}
+	
+	
+
+	public Set<Object> getSet() {
+		return set;
+	}
+
+	public void setSet(Set<Object> set) {
+		this.set = set;
+	}
+
+	
+	public Map<String, Object> getMap() {
+		return map;
+	}
+
+	public void setMap(Map<String, Object> map) {
+		this.map = map;
+	}
+	
+	
+
+	public Properties getProperties() {
+		return properties;
+	}
+
+	public void setProperties(Properties properties) {
+		this.properties = properties;
 	}
 
 	public void printData() {
