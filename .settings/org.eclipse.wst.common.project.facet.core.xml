@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
+  <runtime name="java-1.8.0-openjdk.redhat"/>
+  <secondary-runtime name="Apache Tomcat v9.0"/>
   <installed facet="java" version="1.8"/>
 </faceted-project>
