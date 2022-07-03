@@ -2,10 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.springframework.org/schema/beans
-							http://www.springframework.org/schema/beans/spring-beans.xsd">
+							http://www.springframework.org/schema/beans/spring-beans.xsd"
+		default-init-method="default_init" default-destroy-method="default_destroy">
 
 	<!-- <bean id='hello' class='beans.HelloWorldEn'/> -->
 	<!-- <bean id='hello' class='beans.HelloWorldKo'/> -->
-	<bean id='t1' class='beans.TestBean'/>
+	<bean id='t1' class='beans.TestBean' lazy-init='true' init-method='bean_init' destroy-method='bean_destroy'/>
+	<bean id='t2' class='beans.TestBean2' lazy-init='true'/>
+	
 </beans>
 		

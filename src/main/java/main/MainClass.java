@@ -8,15 +8,12 @@ import org.springframework.core.io.FileSystemResource;
 
 import beans.HelloWorld;
 import beans.TestBean;
+import beans.TestBean2;
 
 public class MainClass {
 	
 	public static void main(String[] args) {
-		
-		test1();
-		test2();
 		test3();
-		test4();
 	}
 	
 	//스프링에서 제공하는 함수
@@ -44,9 +41,16 @@ public class MainClass {
 	public static void test3() {
 		//따로 설정하지 않으면 bean.xml에 설정되있는 bean 객체들이 자동으로 다 생성이된다.
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("config/beans.xml");
-		//이미 만들어져 있는 주소값의 객체를 받아서 사용하는거다.
+		//이미 만들어져 있는 주소값의 객체를 받아서 사용
 		TestBean t1 = ctx.getBean("t1",TestBean.class);
 		System.out.printf("t1:%s\n", t1);
+		
+		System.out.printf("---------------------");
+		
+		TestBean2 t2 = ctx.getBean("t2",TestBean2.class);
+		System.out.printf("t2:%s\n", t2);
+		
+		System.out.printf("---------------------");
 		
 		ctx.close();
 	}
@@ -58,6 +62,7 @@ public class MainClass {
 		//이미 만들어져 있는 주소값의 객체를 받아서 사용하는거다.
 		TestBean t1 = ctx.getBean("t1",TestBean.class);
 		System.out.printf("t1:%s\n", t1);
+	
 		
 		ctx.close();
 	}
