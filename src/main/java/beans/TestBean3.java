@@ -12,6 +12,8 @@ public class TestBean3{
 	private String data3;
 	private HelloWorldEn data4;
 	private HelloWorldKo data5;
+	private HelloWorldJp data6;
+	private HelloWorldUk data7;
 	private List<Object> list;
 	private Set<Object> set;
 	private Map<String,Object> map;
@@ -34,6 +36,9 @@ public class TestBean3{
 		this.data4=data4;
 	}
 	
+	public TestBean3(HelloWorldUk data7) {
+		this.data7=data7;
+	}
 
 	public double getData2() {
 		return data2;
@@ -51,6 +56,16 @@ public class TestBean3{
 		this.data3 = data3;
 	}
 	
+	
+	
+	public HelloWorldEn getData4() {
+		return data4;
+	}
+
+	public void setData4(HelloWorldEn data4) {
+		this.data4 = data4;
+	}
+
 	public HelloWorldKo getData5() {
 		return data5;
 	}
@@ -59,7 +74,13 @@ public class TestBean3{
 		this.data5 = data5;
 	}
 	
-	
+	public HelloWorldJp getData6() {
+		return data6;
+	}
+
+	public void setData6(HelloWorldJp data6) {
+		this.data6 = data6;
+	}
 
 	public List<Object> getList() {
 		return list;

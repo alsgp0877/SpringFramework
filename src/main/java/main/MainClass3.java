@@ -36,12 +36,21 @@ public class MainClass3 {
 		String a1=  (String) map.get("a1");
 		HelloWorldEn a2 = (HelloWorldEn) map.get("a2");
 		
-		System.out.printf("obj2.map:%sn", a1);
-		System.out.printf("obj2.map:%sn", a2);
+		System.out.printf("obj2.map:%s\n", a1);
+		System.out.printf("obj2.map:%s\n", a2);
 		
 		Properties properties = obj2.getProperties();
 		String p1 = properties.getProperty("p1");
-		System.out.printf("obj2.properties:%sn", p1);
+		System.out.printf("obj2.properties:%s\n", p1);
+		
+		
+		TestBean3 obj3 = ctx.getBean("obj3",TestBean3.class);
+		System.out.printf("obj3.data4:%s\n", obj3.getData4());
+		System.out.printf("obj3.data5:%s\n", obj3.getData5());
+		
+		TestBean3 obj4 = ctx.getBean("obj4",TestBean3.class);
+		System.out.printf("obj4.data6:%s\n", obj4.getData6());
+
 
 		ctx.close();
 	}
