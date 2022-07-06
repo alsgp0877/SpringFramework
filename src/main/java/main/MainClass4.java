@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import beans.TestBean;
 import beans.TestBean2;
+import beans.TestBean4;
 import config.beans;
 
 public class MainClass4 {
@@ -23,6 +24,11 @@ public class MainClass4 {
 		
 		TestBean2 java2 = ctx2.getBean(TestBean2.class);
 		System.out.printf("java2:%s\n", java2);
+		
+		TestBean4 java5 = ctx2.getBean("java5",TestBean4.class);
+		System.out.printf("java5:%s\n", java5);
+		TestBean4 java4 = ctx2.getBean("java4",TestBean4.class);
+		System.out.printf("java4:%s\n", java4);
 		
 		ctx2.close();
 				
